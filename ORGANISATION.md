@@ -29,18 +29,20 @@ pattern Oliver uses. Goal: a page Oliver can post on LinkedIn.
 5. **Access hygiene**: deferred until it's a real business.
 6. **Copy sign-off**: Oliver reviews the live alpha before his LinkedIn post.
 
-## Build checklist (Claude executes, in order, once unblocked)
+## Build checklist — EXECUTED 2026-08-08, arc4ne.io LIVE (TLS CN=arc4ne.io, TTFB ~80ms)
+Remaining: Migadu panel step (Gabriel, ~5min) → then mail DNS + swap the contact relay;
+Oliver's profile link + copy sign-off; OG image; optional $1 arc4ne.dev.
 - [x] **CF API access from garuda** — `cloudflare.env` fetched (2026-08-08); token verified
       `active` and sees both zones (arc4ne.io + gipc.dev) — DNS + tunnel automation ready.
-- [ ] **DNS (Terraform)**: `arc4ne.io` + `www` proxied CNAME → the existing tunnel
+- [x] **DNS (Terraform)**: `arc4ne.io` + `www` proxied CNAME → the existing tunnel
       (`…cfargotunnel.com`); later Migadu MX/SPF/DKIM if decision #4 = yes. New TF module, state
       alongside the existing R2 remote state.
-- [ ] **Tunnel ingress**: add both hostnames → `localhost:30082` on the oracle node (+ repo mirror
+- [x] **Tunnel ingress**: add both hostnames → `localhost:30082` on the oracle node (+ repo mirror
       + garuda's rollback copy stays in sync).
-- [ ] **Caddy host-split**: `gipc.dev` block vs `arc4ne.io` block — per-site routing, CSP, headers.
-- [ ] **App scaffold**: Next.js 15, tokens-only styling, matrix aesthetic, in THIS repo; CI →
+- [x] **Caddy host-split**: `gipc.dev` block vs `arc4ne.io` block — per-site routing, CSP, headers.
+- [x] **App scaffold**: Next.js 15, tokens-only styling, matrix aesthetic, in THIS repo; CI →
       multi-arch image → GHCR; k8s manifests + a second ArgoCD Application on the same cluster.
-- [ ] **LP v1**: hero · what-we-do · founders (links out) · contact. SEO/OG/favicon/sitemap.
+- [x] **LP v1**: hero · what-we-do · founders (links out) · contact. SEO/OG/favicon/sitemap.
 - [ ] Optional: `arc4ne.dev` at $1 first year (the Workers-plan perk) as a redirect.
 
 ## Architecture (agreed shape)
