@@ -8,4 +8,4 @@ resources:
   - service.yaml
 images:
   - name: ghcr.io/gabrielipcarvalho/arc4ne-web
-    newTag: "baf639608118f26e4052c341a379460b8d5d9801"
+    newTag: "f16985ed1aeea681834c25f8e6e929c66e9069a9"
