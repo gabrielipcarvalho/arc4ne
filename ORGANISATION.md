@@ -34,9 +34,8 @@ pattern Oliver uses. Goal: a page Oliver can post on LinkedIn.
 6. **v1 copy sign-off** by Oliver before the LinkedIn post.
 
 ## Build checklist (Claude executes, in order, once unblocked)
-- [ ] **CF API access from garuda** — the "Claude" API token lives on the sleeping Mac. Unblock:
-      wake the Mac (re-fetch `cloudflare.env`) **or** mint a fresh token in the dashboard
-      (Zone DNS Edit on arc4ne.io + keep tunnel scope out of it).
+- [x] **CF API access from garuda** — `cloudflare.env` fetched (2026-08-08); token verified
+      `active` and sees both zones (arc4ne.io + gipc.dev) — DNS + tunnel automation ready.
 - [ ] **DNS (Terraform)**: `arc4ne.io` + `www` proxied CNAME → the existing tunnel
       (`…cfargotunnel.com`); later Migadu MX/SPF/DKIM if decision #4 = yes. New TF module, state
       alongside the existing R2 remote state.
