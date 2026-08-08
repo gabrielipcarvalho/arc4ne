@@ -28,7 +28,7 @@ const SERVICES = [
 const STACK = [
   {
     k: "interfaces",
-    v: "TypeScript · React 19 · Next.js 15 · design systems in plain CSS that respect your motion settings",
+    v: "The latest generation of web stacks for design and front-end — fast, accessible interfaces that respect your device, your bandwidth, and your motion settings. Chosen per project, never by fashion.",
   },
   {
     k: "services",
