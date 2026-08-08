@@ -24,6 +24,13 @@ pattern Oliver uses. Goal: a page Oliver can post on LinkedIn.
    — no API exists; transfer to an `arc4ne` org later, GitHub leaves redirects).
 3. **Brand delta**: Claude's creative call — super techy, matrix-derived, alpha-honest. Phosphor
    green + amber on near-black (vs gipc's violet/cyan), IBM-Plex-Mono DNA retained.
+   **Brand decode (locked 2026-08-08): _an arc for Ne_** — the 4 reads "for"; neon is inert until
+   an arc strikes through it; "arcane" = hidden knowledge, neon = visible light → *making the
+   arcane glow*. Tagline: **"You bring the neon. We bring the arc."** The amber 4 in the wordmark
+   is the spark; footer easter egg Ar·C·Ne (argon·carbon·neon). Honesty footnote for physicist
+   parties: neon signs are technically glow discharge; arc is the high-current cousin — same
+   family, cooler word. No acronym; backronyms (Agent Runtime Context…) can be layered later
+   without conflict.
 4. **Email**: hold. Migadu Micro has NO API (panel-only) → Gabriel adds the domain + mailboxes in
    the panel (~5 min, tomorrow); DNS records get staged the moment the verify-TXT exists.
 5. **Access hygiene**: deferred until it's a real business.
