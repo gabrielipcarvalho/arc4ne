@@ -18,20 +18,16 @@ architecture / software engineering organisation. Matrix/terminal aesthetic, bas
 design language. Founder section links out (Gabriel → gipc.dev, Oliver → his profile) — the same
 pattern Oliver uses. Goal: a page Oliver can post on LinkedIn.
 
-## Decisions needed (Gabriel × Oliver — none block the scaffold, all block launch)
-1. **Legal**: business name + structure (ASIC registration + ABN — prerequisite for invoicing and
-   any future .com.au). Pty Ltd vs partnership = accountant conversation.
-2. **GitHub home**: create org `arc4ne` (recommended: clean asset separation, Oliver gets access
-   day one) vs starting under Gabriel's account and migrating later.
-3. **Brand delta**: how far from gipc.dev? Shared DNA is the plan — but the company needs its own
-   accent (ARC4NE wordmark styling, palette shift?, its own sigil?). One decision, big downstream
-   effect.
-4. **Email day one?** `hello@` / `gabriel@` / `oliver@arc4ne.io` — free within the existing Migadu
-   plan (multi-domain). Recommended yes: makes the brand real before the site ships.
-5. **Access hygiene (the JDL lesson, applied to ourselves)**: Oliver as Cloudflare account member;
-   a proper shared password manager (not WhatsApp); documented renewal ownership (domain 2027-08,
-   registrar = CF).
-6. **v1 copy sign-off** by Oliver before the LinkedIn post.
+## Decisions (resolved 2026-08-08 — "two buddies building an alpha", nothing strict yet)
+1. **Legal**: deferred. Tech front first.
+2. **GitHub home**: repo under `gabrielipcarvalho/arc4ne` for the alpha (org creation is web-UI-only
+   — no API exists; transfer to an `arc4ne` org later, GitHub leaves redirects).
+3. **Brand delta**: Claude's creative call — super techy, matrix-derived, alpha-honest. Phosphor
+   green + amber on near-black (vs gipc's violet/cyan), IBM-Plex-Mono DNA retained.
+4. **Email**: hold. Migadu Micro has NO API (panel-only) → Gabriel adds the domain + mailboxes in
+   the panel (~5 min, tomorrow); DNS records get staged the moment the verify-TXT exists.
+5. **Access hygiene**: deferred until it's a real business.
+6. **Copy sign-off**: Oliver reviews the live alpha before his LinkedIn post.
 
 ## Build checklist (Claude executes, in order, once unblocked)
 - [x] **CF API access from garuda** — `cloudflare.env` fetched (2026-08-08); token verified

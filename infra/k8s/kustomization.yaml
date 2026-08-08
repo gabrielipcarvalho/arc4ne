@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+# CI rewrites newTag below on every main build; ArgoCD reconciles the cluster to match.
+# Keep comments free of the literal tag-key token so the sed can't match them.
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+images:
+  - name: ghcr.io/gabrielipcarvalho/arc4ne-web
+    newTag: "latest"

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: arcane-web
+  namespace: arcane
+  labels: { app: arcane-web }
+spec:
+  type: ClusterIP
+  selector: { app: arcane-web }
+  ports:
+    - { port: 80, targetPort: 3000, name: http }

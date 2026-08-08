@@ -1,0 +1,21 @@
+# The arc4ne tenant on the gipc platform cluster. Public repo → https source, no credential.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arcane-web
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/gabrielipcarvalho/arc4ne.git
+    targetRevision: main
+    path: infra/k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: arcane
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
