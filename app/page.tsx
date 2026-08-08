@@ -4,22 +4,22 @@ const MARK = "ARC4NE";
 
 const SERVICES = [
   {
-    n: "001",
+    n: "01 - 001",
     name: "systems architecture",
     desc: "Boundaries, data flows, failure modes — decided before the first commit. We draw the system, then we defend the drawing.",
   },
   {
-    n: "010",
+    n: "02 - 010",
     name: "software engineering",
     desc: "Typed, tested, shipped. Boring pipelines, exciting products. Code that the next engineer thanks you for.",
   },
   {
-    n: "011",
+    n: "03 - 011",
     name: "saas platforms",
     desc: "Multi-tenant products from zero to production — auth, billing, observability, the unglamorous 80% done right.",
   },
   {
-    n: "100",
+    n: "04 - 100",
     name: "applied ai",
     desc: "RAG, agents, evals. Grounded in your data, measured against reality, zero fabrication tolerated — in the model or the pitch.",
   },
@@ -54,27 +54,27 @@ const STACK = [
 
 const METHOD = [
   {
-    n: "001",
+    n: "01 - 001",
     name: "listen & map",
     desc: "The domain, the constraints, the actual problem — before any technology gets named.",
   },
   {
-    n: "010",
+    n: "02 - 010",
     name: "architect",
     desc: "Boundaries, data flows, tenancy, failure modes — on paper, argued about, then committed to.",
   },
   {
-    n: "011",
+    n: "03 - 011",
     name: "build",
     desc: "Typed, tested, reviewed. CI from day one. Every image built for two architectures.",
   },
   {
-    n: "100",
+    n: "04 - 100",
     name: "ship",
     desc: "GitOps: a push to main is the deploy, a revert is the rollback. No snowflake servers, no heroics.",
   },
   {
-    n: "101",
+    n: "05 - 101",
     name: "run",
     desc: "Metrics, logs, SLOs, backups that provably restore — and honest post-mortems when reality pushes back.",
   },
