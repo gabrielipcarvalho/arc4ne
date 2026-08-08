@@ -1,3 +1,5 @@
+import Decode from "./Decode";
+
 const MARK = "ARC4NE";
 
 const SERVICES = [
@@ -43,67 +45,77 @@ export default function Home() {
             </span>
           ))}
         </h1>
-        <p className="tag">
-          systems architecture <span className="sep">·</span> software engineering{" "}
-          <span className="sep">·</span> applied AI
+        <Decode
+          as="p"
+          className="tag"
+          text="systems architecture · software engineering · applied AI"
+          delay={450}
+        />
+        <Decode
+          as="p"
+          className="decode"
+          text="/ɑːˈkeɪn/ — an arc for Ne · neon sits dark until an arc strikes through it."
+          delay={650}
+        />
+        <Decode as="p" className="spark" text="You bring the neon. We bring the arc." delay={900} />
+        <Decode
+          as="p"
+          className="sub"
+          text="We design, build, and run software that holds up in production — from first diagram to metal."
+          delay={1100}
+        />
+        <p className="badge">
+          <Decode text="alpha v0.1 — two engineers, one forge" delay={1350} />
         </p>
-        <p className="decode">
-          /ɑːˈkeɪn/ — <em>an arc for Ne</em> · neon sits dark until an arc strikes
-          through it.
-        </p>
-        <p className="spark">You bring the neon. We bring the arc.</p>
-        <p className="sub">
-          We design, build, and run software that holds up in production — from first
-          diagram to metal.
-        </p>
-        <p className="badge">alpha v0.1 — two engineers, one forge</p>
       </header>
 
       <section className="services" aria-labelledby="svc-h">
         <h2 id="svc-h" className="sect">
-          <span className="prompt">$</span> ls ./capabilities
+          <span className="prompt">$</span> <Decode text="ls ./capabilities" />
         </h2>
         <div className="grid">
-          {SERVICES.map((s) => (
+          {SERVICES.map((s, i) => (
             <article key={s.n} className="card">
               <span className="num" aria-hidden="true">
                 {s.n}
               </span>
-              <h3>{s.name}</h3>
-              <p>{s.desc}</p>
+              <Decode as="h3" text={s.name} delay={i * 120} />
+              <Decode as="p" text={s.desc} delay={i * 120 + 150} />
             </article>
           ))}
         </div>
       </section>
 
       <p className="ethos" role="doc-epigraph">
-        own your metal <span className="sep">·</span> measure, never assume{" "}
-        <span className="sep">·</span> ship honest systems
+        <Decode text="own your metal · measure, never assume · ship honest systems" />
       </p>
 
       <section className="founders" aria-labelledby="fnd-h">
         <h2 id="fnd-h" className="sect">
-          <span className="prompt">$</span> who
+          <span className="prompt">$</span> <Decode text="who" />
         </h2>
         <div className="fgrid">
           <article className="person">
-            <h3>gabriel carvalho</h3>
-            <p className="role">systems · platform · ai</p>
+            <Decode as="h3" text="gabriel carvalho" />
+            <Decode as="p" className="role" text="systems · platform · ai" delay={120} />
             <p>
-              Builds and runs the stack this page is served from — self-hosted
-              Kubernetes, GitOps, RAG systems.{" "}
+              <Decode
+                text="Builds and runs the stack this page is served from — self-hosted Kubernetes, GitOps, RAG systems."
+                delay={240}
+              />{" "}
               <a href="https://gipc.dev" rel="me">
                 gipc.dev ↗
               </a>
             </p>
           </article>
           <article className="person">
-            <h3>oliver kuchendorf</h3>
-            <p className="role">engineering · product</p>
+            <Decode as="h3" text="oliver kuchendorf" delay={100} />
+            <Decode as="p" className="role" text="engineering · product" delay={220} />
             <p>
-              Three decades of shipping software — from video-conferencing systems to
-              CTO of one of Brazil&apos;s biggest consumer platforms, 1000+ projects
-              through his own studio.{" "}
+              <Decode
+                text="Three decades of shipping software — from video-conferencing systems to CTO of one of Brazil's biggest consumer platforms, 1000+ projects through his own studio."
+                delay={340}
+              />{" "}
               <a href="https://internet-arts.com" rel="me">
                 internet-arts.com ↗
               </a>
@@ -114,7 +126,7 @@ export default function Home() {
 
       <section className="contact" aria-labelledby="ctc-h">
         <h2 id="ctc-h" className="sect">
-          <span className="prompt">$</span> open channel
+          <span className="prompt">$</span> <Decode text="open channel" />
         </h2>
         <p className="term">
           <a href="mailto:arcan.e@gipc.dev?subject=arc4ne">
