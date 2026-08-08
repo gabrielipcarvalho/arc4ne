@@ -24,9 +24,10 @@ export default function Rain() {
 
     let raf = 0;
     let cols: { y: number; v: number; flash: boolean }[] = [];
-    const FS = 16; // glyph cell size (css px)
+    let FS = 16; // glyph cell size (css px) — smaller on narrow screens
 
     const size = () => {
+      FS = innerWidth < 640 ? 11 : 16;
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.floor(innerWidth * dpr);
       canvas.height = Math.floor(innerHeight * dpr);
