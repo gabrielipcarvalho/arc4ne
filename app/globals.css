@@ -49,6 +49,21 @@ body::before {
   z-index: 1;
 }
 
+/* dim matrix rain — behind everything, beneath the scanlines, gone under reduced motion */
+.rain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rain {
+    display: none;
+  }
+}
+
 main {
   position: relative;
   z-index: 2;

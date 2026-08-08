@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
+import Rain from "./Rain";
 import "./globals.css";
 
 const mono = IBM_Plex_Mono({
@@ -35,7 +36,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={mono.variable}>
-      <body>{children}</body>
+      <body>
+        <Rain />
+        {children}
+      </body>
     </html>
   );
 }

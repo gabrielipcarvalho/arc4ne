@@ -98,11 +98,15 @@ export default function Home() {
             </p>
           </article>
           <article className="person">
-            <h3>oliver</h3>
-            <p className="role">product · strategy</p>
+            <h3>oliver kuchendorf</h3>
+            <p className="role">engineering · product</p>
             <p>
-              Two decades of building products and businesses.{" "}
-              <span className="pending">// profile uplink pending</span>
+              Three decades of shipping software — from video-conferencing systems to
+              CTO of one of Brazil&apos;s biggest consumer platforms, 1000+ projects
+              through his own studio.{" "}
+              <a href="https://internet-arts.com" rel="me">
+                internet-arts.com ↗
+              </a>
             </p>
           </article>
         </div>
@@ -113,8 +117,8 @@ export default function Home() {
           <span className="prompt">$</span> open channel
         </h2>
         <p className="term">
-          <a href="mailto:gabriel@gipc.dev?subject=arc4ne">
-            gabriel@gipc.dev <span className="dim">— relay while arc4ne mail spins up</span>
+          <a href="mailto:arcane@gipc.dev?subject=arc4ne">
+            arcane@gipc.dev <span className="dim">— relay while arc4ne mail spins up</span>
           </a>
         </p>
       </section>
