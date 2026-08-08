@@ -27,13 +27,18 @@ export default function Home() {
   return (
     <main>
       <p className="boot" aria-hidden="true">
-        <span className="prompt">$</span> arc4ne --init <span className="ok">· ok</span>
+        <span className="prompt">$</span> arc4ne --init <span className="dim">· arc struck</span>{" "}
+        <span className="ok">· ok</span>
       </p>
 
       <header className="hero">
         <h1 className="mark" aria-label="ARC4NE">
           {MARK.split("").map((ch, i) => (
-            <span key={i} className="g" style={{ animationDelay: `${i * 90}ms` }}>
+            <span
+              key={i}
+              className={ch === "4" ? "g four" : "g"}
+              style={{ animationDelay: `${i * 90}ms` }}
+            >
               {ch}
             </span>
           ))}
@@ -42,6 +47,11 @@ export default function Home() {
           systems architecture <span className="sep">·</span> software engineering{" "}
           <span className="sep">·</span> applied AI
         </p>
+        <p className="decode">
+          /ɑːˈkeɪn/ — <em>an arc for Ne</em> · neon sits dark until an arc strikes
+          through it.
+        </p>
+        <p className="spark">You bring the neon. We bring the arc.</p>
         <p className="sub">
           We design, build, and run software that holds up in production — from first
           diagram to metal.
@@ -111,8 +121,11 @@ export default function Home() {
 
       <footer>
         <p>
-          status: <span className="ok">alpha</span> · infra: self-hosted k3s · syd ·
-          © {new Date().getFullYear()} arc4ne
+          status: <span className="ok">alpha</span> · infra: self-hosted k3s · syd ·{" "}
+          <span className="chem" title="argon · carbon · neon">
+            Ar·C·Ne
+          </span>{" "}
+          · © {new Date().getFullYear()} arc4ne
         </p>
       </footer>
     </main>

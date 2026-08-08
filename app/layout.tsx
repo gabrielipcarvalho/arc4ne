@@ -10,9 +10,9 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arc4ne.io"),
-  title: "ARC4NE — systems architecture · software engineering · applied AI",
+  title: "ARC4NE — an arc for Ne · systems architecture · software engineering · applied AI",
   description:
-    "arc4ne is a systems architecture and software engineering outfit — services, SaaS, and applied AI, built to hold up in production. Alpha.",
+    "arc4ne — an arc for Ne. Neon sits dark until an arc strikes through it: you bring the neon, we bring the arc. Systems architecture, software engineering, applied AI. Alpha.",
   keywords: [
     "systems architecture",
     "software engineering",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "Australia",
   ],
   openGraph: {
-    title: "ARC4NE",
+    title: "ARC4NE — an arc for Ne",
     description:
-      "systems architecture · software engineering · applied AI — built to hold up in production.",
+      "You bring the neon. We bring the arc. — systems architecture · software engineering · applied AI.",
     url: "https://arc4ne.io",
     siteName: "arc4ne",
     type: "website",
