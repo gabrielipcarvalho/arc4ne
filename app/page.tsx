@@ -116,26 +116,30 @@ export default function Home() {
           <span className="k">from chemistry:</span>{" "}
           <Decode text="Ne — neon, element 10. A noble gas: stable, invisible, utterly inert — until it's energised." delay={850} />
         </p>
+        <p className="defn veil">
+          <span className="k">put together:</span>{" "}
+          <Decode text="an arc discharge through neon gas is literally how a neon sign glows. 'Arcane' means hidden knowledge; neon means visible light. arc4ne is the spark between them — the thing that makes the arcane glow." delay={1050} />
+        </p>
         <Decode
           as="p"
           className="decode veil"
           text="/ɑːˈkeɪn/ — an arc for Ne · neon sits dark until an arc strikes through it."
-          delay={1050}
+          delay={1300}
         />
         <Decode
           as="p"
           className="spark veil"
           text="You bring the neon. We bring the arc."
-          delay={1300}
+          delay={1550}
         />
         <Decode
           as="p"
           className="sub veil"
           text="We design, build, and run software that holds up in production — from first diagram to metal."
-          delay={1500}
+          delay={1750}
         />
         <p className="badge">
-          <Decode text="alpha v0.1 — forged in Australia" delay={1700} />
+          <Decode text="alpha v0.1 — forged in Australia" delay={1950} />
         </p>
         <nav className="jump veil" aria-label="sections">
           <span className="prompt">&gt;</span> goto:{" "}
