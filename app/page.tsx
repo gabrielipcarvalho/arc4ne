@@ -117,8 +117,8 @@ export default function Home() {
           <span className="prompt">$</span> open channel
         </h2>
         <p className="term">
-          <a href="mailto:arcane@gipc.dev?subject=arc4ne">
-            arcane@gipc.dev <span className="dim">— relay while arc4ne mail spins up</span>
+          <a href="mailto:arcan.e@gipc.dev?subject=arc4ne">
+            arcan.e@gipc.dev <span className="dim">— relay while arc4ne mail spins up</span>
           </a>
         </p>
       </section>
