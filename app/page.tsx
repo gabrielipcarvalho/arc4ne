@@ -238,21 +238,17 @@ export default function Home() {
         <Decode
           as="p"
           className="lead veil"
-          text="An Australian software engineering outfit: architects and builders who own their infrastructure and publish their methods. Small by design — senior hands on every line."
+          text="A team of German, Australian and Brazilian software engineers with a proven track record — decades of shipping, from video-conferencing systems in the '90s to modern SaaS and applied AI. Timezone-native for Australia; working reach across Europe and South America."
         />
         <div className="fgrid">
           <article className="person">
-            <Decode as="h3" text="oliver kuchendorf" />
-            <Decode as="p" className="role" text="partner · engineering & product" delay={120} />
-            <p>
-              <Decode
-                text="Three decades of shipping software: video-conferencing systems in the '90s, CTO of one of Brazil's biggest consumer platforms, 1000+ projects through his own studio — full-stack web and mobile, SaaS with auth and billing, AI/LLM integration, code audits and security hardening, DevOps and 24/7 operations."
-                delay={240}
-              />{" "}
-              <a href="https://internet-arts.com" rel="me">
-                internet-arts.com ↗
-              </a>
-            </p>
+            <Decode as="h3" text="the team" />
+            <Decode as="p" className="role" text="engineering · product · operations" delay={120} />
+            <Decode
+              as="p"
+              text="Senior hands on every line: full-stack web and mobile, SaaS with auth and billing, AI/LLM integration, code audits and security hardening, DevOps and 24/7 operations. Hundreds of projects shipped — from startups to household-name platforms."
+              delay={240}
+            />
           </article>
           <article className="person">
             <Decode as="h3" text="the bench" delay={100} />
