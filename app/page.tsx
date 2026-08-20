@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm";
 import Decode from "./Decode";
 
 const MARK = "ARC4NE";
@@ -266,11 +267,21 @@ export default function Home() {
         <h2 id="ctc-h" className="sect veil">
           <span className="prompt">$</span> <Decode text="open channel" />
         </h2>
-        <p className="term">
-          <a href="mailto:arcan.e@gipc.dev?subject=arc4ne">
-            arcan.e@gipc.dev <span className="dim">— relay while arc4ne mail spins up</span>
-          </a>
-        </p>
+        <Decode
+          as="p"
+          className="lead veil"
+          text="Direct line — tell us what you're building, what's in the way, and where it needs to go. Attach the brief, the spec, or the napkin sketch."
+          delay={150}
+        />
+        <ContactForm />
+        <noscript>
+          <p className="term" style={{ marginTop: 16 }}>
+            <a href="mailto:arcan.e@gipc.dev?subject=arc4ne">
+              arcan.e@gipc.dev
+            </a>
+            <span className="dim"> — the form needs JavaScript; the mailbox doesn't</span>
+          </p>
+        </noscript>
       </section>
 
       <footer>

@@ -353,6 +353,203 @@ a:focus-visible,
   font-size: 0.95rem;
 }
 
+.contact .lead {
+  margin-bottom: 22px;
+}
+
+.err {
+  color: var(--amber);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* the compose window — .term panel grown into a form */
+.cform form {
+  display: grid;
+  gap: 14px;
+}
+
+.cfield {
+  display: grid;
+  gap: 4px;
+}
+
+.clabel {
+  color: var(--fg);
+  font-size: 0.85rem;
+}
+
+.clabel .cl-opt,
+.ccaps,
+.ccount {
+  color: var(--dim);
+  font-size: 0.78rem;
+}
+
+.ccount {
+  justify-self: end;
+}
+
+.cinput {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 8px 10px;
+  caret-color: var(--phos);
+}
+
+.cinput::placeholder {
+  color: var(--dim);
+  opacity: 0.55;
+}
+
+.cinput:hover {
+  border-color: var(--line-strong);
+}
+
+.ctext {
+  resize: vertical;
+  min-height: 6rem;
+  line-height: 1.5;
+}
+
+/* attach row — button + caps + chips */
+.cattach {
+  display: grid;
+  gap: 8px;
+}
+
+.cfile {
+  justify-self: start;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--phos);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+
+.cfile:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 3px 10px;
+  font-size: 0.8rem;
+}
+
+.chip-name {
+  color: var(--fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 30ch;
+}
+
+.chip-size {
+  color: var(--dim);
+}
+
+.chip-total {
+  color: var(--dim);
+  border-style: dotted;
+}
+
+.chip-x {
+  background: none;
+  border: none;
+  color: var(--amber);
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.chip-x:hover {
+  color: var(--fg);
+}
+
+/* actions + status line */
+.cactions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.xmit {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--phos);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.xmit:hover:not(:disabled) {
+  color: var(--amber);
+  border-color: var(--amber);
+  background: rgba(245, 184, 70, 0.06);
+}
+
+.xmit:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.cts-note {
+  font-size: 0.78rem;
+}
+
+.cstat {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  min-height: 2.2em; /* reserve the line — status swaps never shift the layout */
+}
+
+/* honeypot — far off-screen; real users can't see or tab into it */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* turnstile widget container — transparent iframe, keep it snug in the grid */
+.turnstile-box {
+  min-height: 65px;
+}
+
 /* footer */
 footer {
   border-top: 1px solid var(--line);
@@ -381,7 +578,8 @@ footer {
     }
   }
 
-  .boot::after {
+  .boot::after,
+  .cstat .caret {
     animation: caret 1.1s steps(1) infinite;
   }
 

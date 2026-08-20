@@ -32,6 +32,16 @@ spec:
           env:
             - { name: NODE_ENV, value: production }
             - { name: PORT, value: "3000" }
+            # open-channel relay (contact form). The Secret is applied by hand (public repo) —
+            # see ORGANISATION.md; ArgoCD doesn't manage it, so prune/self-heal never touches it.
+            - name: SMTP_HOST
+              valueFrom: { secretKeyRef: { name: contact-secrets, key: SMTP_HOST } }
+            - name: SMTP_USER
+              valueFrom: { secretKeyRef: { name: contact-secrets, key: SMTP_USER } }
+            - name: SMTP_PASS
+              valueFrom: { secretKeyRef: { name: contact-secrets, key: SMTP_PASS } }
+            - name: TURNSTILE_SECRET
+              valueFrom: { secretKeyRef: { name: contact-secrets, key: TURNSTILE_SECRET } }
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -49,7 +59,9 @@ spec:
             periodSeconds: 20
           resources:
             requests: { cpu: 25m, memory: 64Mi }
-            limits: { cpu: 300m, memory: 192Mi }
+            # 256Mi: headroom for the contact route's in-flight multipart parse + MIME build
+            # (8 MiB payload ≈ ~22 MiB transient after base64 + buffers)
+            limits: { cpu: 300m, memory: 256Mi }
       volumes:
         - name: tmp
           emptyDir: {}

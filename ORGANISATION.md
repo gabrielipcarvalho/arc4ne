@@ -37,8 +37,8 @@ pattern Oliver uses. Goal: a page Oliver can post on LinkedIn.
 6. **Copy sign-off**: Oliver reviews the live alpha before his LinkedIn post.
 
 ## Build checklist — EXECUTED 2026-08-08, arc4ne.io LIVE (TLS CN=arc4ne.io, TTFB ~80ms)
-Remaining: Migadu panel step (Gabriel, ~5min) → then mail DNS + swap the contact relay;
-Oliver's profile link + copy sign-off; OG image; optional $1 arc4ne.dev.
+Remaining: Oliver's profile link + copy sign-off; OG image; optional $1 arc4ne.dev;
+Migadu panel add-domain (optional now — see the channel note below).
 - [x] **CF API access from garuda** — `cloudflare.env` fetched (2026-08-08); token verified
       `active` and sees both zones (arc4ne.io + gipc.dev) — DNS + tunnel automation ready.
 - [x] **DNS (Terraform)**: `arc4ne.io` + `www` proxied CNAME → the existing tunnel
@@ -50,6 +50,17 @@ Oliver's profile link + copy sign-off; OG image; optional $1 arc4ne.dev.
 - [x] **App scaffold**: Next.js 15, tokens-only styling, matrix aesthetic, in THIS repo; CI →
       multi-arch image → GHCR; k8s manifests + a second ArgoCD Application on the same cluster.
 - [x] **LP v1**: hero · what-we-do · founders (links out) · contact. SEO/OG/favicon/sitemap.
+- [x] **Open channel — contact form** (2026-08-21): `#channel` is now a server-backed form
+      (name · email · tel? · message · attachments) → SMTP-relayed to gabriel@gipc.dev.
+      Turnstile-gated (dedicated arc4ne.io widget, fail-closed verify — the gipc ai-service
+      rule), honeypot + 5/hr per-IP limit, caps **3 files · 8 MiB total · no executables**
+      (Migadu publishes no per-message cap; the pod's memory + base64 overhead are the real
+      ceilings → limit raised to 256 Mi). **Ops note**: the relay sends through the existing
+      gipc.dev Migadu mailbox; when real arc4ne.io mail exists, swap `SMTP_USER`/`SMTP_PASS`
+      in the cluster Secret — zero code change. Migadu Micro's 20 **outgoing**/day is the hard
+      ceiling (Turnstile + rate limit keep us far below). Secrets live in the hand-applied
+      `contact-secrets` Secret (namespace `arcane`) — this repo is public, so the Secret is
+      never committed; ArgoCD doesn't manage it, so prune/self-heal can't remove it.
 - [ ] Optional: `arc4ne.dev` at $1 first year (the Workers-plan perk) as a redirect.
 
 ## Architecture (agreed shape)
